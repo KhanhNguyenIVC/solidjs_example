@@ -1,18 +1,23 @@
 import { HelloWorldComponent } from "../components/HelloWorldComponent";
-import { createSignal, createEffect } from "solid-js";
+import { createSignal, createEffect, createMemo } from "solid-js";
 
 const Introduction = () => {
     const HelloWorld = () => {
         return <div>Hello World!</div>
     }
 
-    const [count, setCount]     = createSignal(0);
-    const [countSd, setCountSd] = createSignal(0);
+    const [count, setCount]     = createSignal(0)
+    const [countSd, setCountSd] = createSignal(0)
+
+    const countMemo = createMemo(() => {
+        console.log('Memos event')
+        return count() + 1
+    })
 
     createEffect(() => {
-        console.log('Effect event: onChange any signal');
-        console.log('count', count());
-        console.log('countSd', countSd());
+        console.log('Effect event: onChange any signal')
+        console.log('count', count())
+        console.log('countSd', countSd())
     })
 
     return (
@@ -26,7 +31,9 @@ const Introduction = () => {
             <button style={'margin-top: 1rem;margin-left: 1rem;'} onClick={() => setCountSd(c => c + 1)}>
                 second count is {countSd()}
             </button>
-            <span></span>
+            <p>Memos: {countMemo()}</p>
+            <p>Memos: {countMemo()}</p>
+            <p>Memos: {countMemo()}</p>
         </>
     )
 }
