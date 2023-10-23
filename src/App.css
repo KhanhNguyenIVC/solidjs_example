@@ -82,7 +82,7 @@
 
 .lifecycles-grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
   gap: 10px;
 }
 
@@ -91,4 +91,8 @@
   width: 200px; 
   overflow: hidden;
   text-overflow: ellipsis; 
+}
+
+.image-rounded {
+  border-radius: 0.25rem;
 }

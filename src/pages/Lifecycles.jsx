@@ -5,7 +5,7 @@ const Lifecycles = () => {
     const [counter, setCounter] = createSignal(0)
 
     const getPhotos = () => {
-        fetch('https://jsonplaceholder.typicode.com/photos?_limit=8')
+        fetch('https://jsonplaceholder.typicode.com/photos?_limit=6')
             .then((response) => response.json())
             .then((json) => { setPhotos(json); console.log(json) });
     }
@@ -30,7 +30,7 @@ const Lifecycles = () => {
                 <Index each={photos()}>{(photo, i) =>
                     <div>
                         <p class="txt-over">{photo().title}</p>
-                        <img src={photo().url} width={200} height={200} /><br />
+                        <img class="image-rounded" src={photo().url} width={200} height={200} /><br />
                     </div>
                 }</Index>
             </div>
