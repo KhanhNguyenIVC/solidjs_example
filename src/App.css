@@ -25,3 +25,70 @@
 .read-the-docs {
   color: #888;
 }
+
+.text-focus {
+  color: #e17f7d;
+}
+
+.for-card {
+  text-align: left;
+  border: 1px solid #ffffff;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: 85px auto;
+}
+
+.grid-view:first-of-type {
+  margin-top: 7px;
+}
+
+.header-body-mass {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 3px;
+}
+
+.card-body-mass {
+  text-align: center;
+  background-color: #A9A9A9;
+  height: 30px;
+}
+
+.text-body-mass {
+  text-align: center;
+  background-color: #1a1a1a;
+  height: 30px;
+}
+
+.active-body-mass {
+  box-shadow: #00FFFF 0px 2px 4px 0px, #00FFFF 0px 2px 16px 0px;
+}
+
+.error-text {
+  color: red;
+}
+
+.lifecycles-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+.txt-over {
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}

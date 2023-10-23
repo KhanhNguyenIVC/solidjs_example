@@ -1,5 +1,4 @@
-import { For, Index, Switch, Match, createSignal } from "solid-js";
-import "./ControlFlow.css";
+import { createSignal } from "solid-js";
 
 const ControlFlow = () => {
     const [isLight, setIsLight] = createSignal(false)
@@ -83,7 +82,7 @@ const ControlFlow = () => {
                     <input type="text" onChange={(e) => setWeighht(e.target.value)} /><br />
                     <label for="username">Height (m)</label><br />
                     <input type="text" onChange={(e) => setHeight(e.target.value)} /><br />
-                    <div style={isErrorInput() ? '' : 'display:none'}><span class="error-text">👉Please enter the weight & the height.</span></div>
+                    <div style={isErrorInput() ? '' : 'display:none'}><span class="error-text">⚠️Please enter the weight & the height.</span></div>
                     <button style={'margin-top:7px'} onClick={() => getBMI()}>Excute</button>
                 </div>
                 <div>
@@ -102,10 +101,10 @@ const ControlFlow = () => {
                     <br />
                 </div>
                 <Switch>
-                    <Match when={bmi() === 0}>👉Your BMI is {bmiScore().toFixed(2)} You're underweight.</Match>
-                    <Match when={bmi() === 1}>👉Your BMI is {bmiScore().toFixed(2)} You're healthy.</Match>
-                    <Match when={bmi() === 2}>👉Your BMI is {bmiScore().toFixed(2)} You're overweight.</Match>
-                    <Match when={bmi() === 3}>👉Your BMI is {bmiScore().toFixed(2)} You're obesity</Match>
+                    <Match when={bmi() === 0}>👉Your BMI is <span class="text-focus">{bmiScore().toFixed(2)}</span> You're underweight.</Match>
+                    <Match when={bmi() === 1}>👉Your BMI is <span class="text-focus">{bmiScore().toFixed(2)}</span> You're healthy.</Match>
+                    <Match when={bmi() === 2}>👉Your BMI is <span class="text-focus">{bmiScore().toFixed(2)}</span> You're overweight.</Match>
+                    <Match when={bmi() === 3}>👉Your BMI is <span class="text-focus">{bmiScore().toFixed(2)}</span> You're obesity</Match>
                 </Switch>
             </div>
         </>

@@ -22,9 +22,9 @@ const Introduction = () => {
 
     return (
         <>
-            <h1>This is a Header</h1>
+            <h1>Basic Reactivity</h1>
             <HelloWorld />
-            <HelloWorldComponent />
+            <HelloWorldComponent name="IVC Members👋" />
             <button style={'margin-top: 1rem'} onClick={() => setCount(count() + 1)}>
                 count is {count()}
             </button>
