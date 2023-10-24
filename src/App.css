@@ -35,6 +35,7 @@
   border: 1px solid #ffffff;
   margin-top: 1rem;
   padding: 10px;
+  border-radius: 3px;
 }
 
 .grid-view {
@@ -74,6 +75,11 @@
 
 .active-body-mass {
   box-shadow: #00FFFF 0px 2px 4px 0px, #00FFFF 0px 2px 16px 0px;
+}
+
+.on-the-light {
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px #FFFF00, 0px -10px 15px #FFFF00;
 }
 
 .error-text {

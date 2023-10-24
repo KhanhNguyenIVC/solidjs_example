@@ -54,16 +54,18 @@ const ControlFlow = () => {
     return (
         <>
             <h1>Control Flow</h1>
-            <Show
-                when={!isLight()}
-                fallback={<div>
-                    <button onClick={() => setIsLight(false)}>Turn off the light</button>
-                    <img src="/images/bulb-on.png" alt="The light on" width={50} height={70} />
-                </div>}
-            >
-                <button onClick={() => setIsLight(true)}>Turn on the light</button>
-                <img src="/images/bulb-off.png" alt="The light off" width={50} height={70} />
-            </Show>
+            <div style={'background:white;padding:15px;border-radius:3px;'}>
+                <img style={isLight() ? '' : 'display: none'}  class="on-the-light" src="/images/bulb-on.png" alt="The light on" width={50} height={70} />
+                <img style={isLight() ? 'display: none' : ''} src="/images/bulb-off.png" alt="The light on" width={50} height={70} /><br />
+                <Show
+                    when={!isLight()}
+                    fallback={<div>
+                        <button style={'background:#D1D100;'} onClick={() => setIsLight(false)}>Turn off the light</button>
+                    </div>}
+                >
+                    <button onClick={() => setIsLight(true)}>Turn on the light</button>
+                </Show>
+            </div>
 
             <div class="for-card">
                 <span class="text-focus">&#60;For&#62;</span> component
