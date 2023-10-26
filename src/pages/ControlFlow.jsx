@@ -109,6 +109,7 @@ const ControlFlow = () => {
                     <Match when={bmi() === 3}>👉Your BMI is <span class="text-focus">{bmiScore().toFixed(2)}</span> You're obesity</Match>
                 </Switch>
             </div>
+            <a link href="/lifecycles">Go to Lifecycles page</a>
         </>
     )
 }

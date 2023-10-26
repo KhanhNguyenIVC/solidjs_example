@@ -34,6 +34,7 @@ const Introduction = () => {
             <p>Memos: {countMemo()}</p>
             <p>Memos: {countMemo()}</p>
             <p>Memos: {countMemo()}</p>
+            <a link href="/control-flow">Go to ControlFlow page</a>
         </>
     )
 }

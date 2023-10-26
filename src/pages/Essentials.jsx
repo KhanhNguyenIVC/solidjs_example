@@ -24,6 +24,7 @@ const Essentials = () => {
                     Edit <code>src/App.jsx</code> and save to test HMR
                 </p>
             </div>
+            <a link href="/introduction">Go to Reactivity page</a>
             <p class="read-the-docs">
                 Click on the Vite and Solid logos to learn more
             </p>
