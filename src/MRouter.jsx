@@ -1,6 +1,6 @@
 import { Router, Route, Routes } from "@solidjs/router";
 import Essentials from './pages/Essentials';
-import Introduction from './pages/Introduction';
+import Reactivity from './pages/Reactivity';
 import ControlFlow from './pages/ControlFlow';
 import Lifecycles from "./pages/Lifecycles";
 
@@ -10,7 +10,7 @@ const MRouter = () => {
             <Router>
                 <Routes>
                     <Route path="/" component={Essentials} />
-                    <Route path="/introduction" component={Introduction} />
+                    <Route path="/reactivity" component={Reactivity} />
                     <Route path="/control-flow" component={ControlFlow} />
                     <Route path="/lifecycles" component={Lifecycles} />
                 </Routes>
